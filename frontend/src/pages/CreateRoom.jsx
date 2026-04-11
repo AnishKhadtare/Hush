@@ -84,6 +84,7 @@ export default function CreateRoom() {
           roomDuration: duration,
           longitude: coords.longitude,
           latitude: coords.latitude,
+          roomCode: form.roomCode ? parseInt(form.roomCode) : null,
         }),
       });
       toast.success("Room created!");
