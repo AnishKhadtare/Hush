@@ -1,7 +1,8 @@
 import SockJS from "sockjs-client";
 import { Client } from "@stomp/stompjs";
 
-const WS_BASE = process.env.REACT_APP_WS_URL;
+//const WS_BASE = process.env.REACT_APP_WS_URL;
+const WS_BASE = import.meta.env.VITE_WS_URL;
 
 export function connectRoomSocket(roomId, onMessage, onMemberUpdate, onConnected) {
     const client = new Client({
