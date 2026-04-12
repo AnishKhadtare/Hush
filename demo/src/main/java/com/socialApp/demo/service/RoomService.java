@@ -65,7 +65,7 @@ public class RoomService {
 
         room.setOwner(loggedInUser);
         room.setRoomStatus(RoomStatus.ACTIVE);
-        room.setExpiresAt(new Date((long) (System.currentTimeMillis() + 1000*60*(createRoomRequest.roomDuration()))));
+        room.setExpiresAt(new Date((long) (System.currentTimeMillis() + 1000*60*60*(createRoomRequest.roomDuration()))));
 
 //      When user creates a room first the location of user is updated in userLocation
 //      and that updated location is fetched and provided as centerLocation for that createdRoom.
